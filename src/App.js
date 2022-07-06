@@ -1,25 +1,27 @@
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Header from "./components/header/Header";
 import React from "react";
-import BlogsPage from "./pages/BlogsPage/BlogsPage";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import MainPage from "./pages/mainPage/MainPage";
+import BlogsPage from "./pages/blogsPage/BlogsPage";
+import Header from "./components/header/Header";
 import LoginPage from "./pages/loginPage/LoginPage";
 import Blog from "./components/blog/Blog";
+import Layout from "./components/layout/Layout";
 
 
 function App() {
     return (
         <BrowserRouter>
-            <Header/>
-            <Routes>
-                <Route index element={<MainPage/>}/>
-                <Route path="/blogs" element={<BlogsPage/>}/>
-                <Route path="/login" element={<LoginPage/>}/>
+                <Routes>
 
-                <Route path="/blogs/:id" element={<Blog/>}/>
-            </Routes>
+                    <Route path="/" element={<Layout/>}>
+                        <Route index element={<MainPage/>}/>
+                        <Route path="blogs" element={<BlogsPage/>}/>
+                    </Route>
+
+                    <Route path="/login" element={<LoginPage/>}/>
+                    <Route path="/blogs/:name" element={<Blog/>}/>
+                </Routes>
         </BrowserRouter>
 
     );

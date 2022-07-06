@@ -2,15 +2,14 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
 function Blog() {
+    const [post, setPost] = useState({});
     const params = useParams();
-    const [post, setPost] = useState({})
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+        fetch(`https://jsonplaceholder.typicode.com/posts/${params.name}`)
             .then(response => response.json())
             .then(data => setPost(data))
-
-    },[])
+    }, [])
 
     return (
         <div className="container">

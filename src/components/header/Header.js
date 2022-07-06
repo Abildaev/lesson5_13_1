@@ -1,17 +1,16 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
-function Header() {
+function Header(props) {
     return (
         <ul className="container">
             <li>
-                <NavLink to="/"> main page</NavLink>
+                <NavLink to="/">main page</NavLink>
             </li>
             <li>
-                <NavLink to="/blogs"> blogs</NavLink>
+                <NavLink to="/blogs">blogs page</NavLink>
             </li>
         </ul>
     );
 }
-
 export default Header;
