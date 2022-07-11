@@ -22,6 +22,7 @@ function PostPage() {
             <Post/>
             <h1>Dastan</h1>
             <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
         </div>
     );
 }
