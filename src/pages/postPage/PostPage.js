@@ -20,9 +20,10 @@ function PostPage() {
             <input type="number" placeholder="id" onChange={changeInput}/>
             <button onClick={getPostFunc}>get one post</button>
             <Post/>
+            <p>dsadasd</p>
             <h1>Dastan</h1>
-            <p>Lorem ipsum dolor sit.</p>
-            <p>Lorem ipsum dolor sit.</p>
+            <p>dsadasd</p>
+            <p>dsadasd</p>sds
         </div>
     );
 }
