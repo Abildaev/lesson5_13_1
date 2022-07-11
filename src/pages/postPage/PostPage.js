@@ -21,6 +21,7 @@ function PostPage() {
             <button onClick={getPostFunc}>get one post</button>
             <Post/>
             <h1>Dastan</h1>
+            <p>Lorem ipsum dolor sit.</p>
         </div>
     );
 }
