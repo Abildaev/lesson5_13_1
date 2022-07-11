@@ -1,14 +1,19 @@
 import React from 'react';
-import {useLocation} from "react-router-dom";
-import Header from "../../components/header/Header";
+import {useDispatch, useSelector} from "react-redux";
+import usersReducer, {getUsers} from "../../store/usersSlice";
 
-function MainPage(props) {
-    const location = useLocation();
-    console.log(location);
+function MainPage() {
+    const dispatch = useDispatch();
+    const users = useSelector(state => state.usersReducer.users)
+
 
     return (
-        <div className="container">
-            <h1>Main page</h1>
+        <div>
+            <button onClick={() => dispatch(getUsers())}>get users</button>
+
+            <ul>
+                {users.map(user => <li key={user.id}>{user.name}</li>)}
+            </ul>
         </div>
     );
 }
