@@ -20,6 +20,7 @@ function PostPage() {
             <input type="number" placeholder="id" onChange={changeInput}/>
             <button onClick={getPostFunc}>get one post</button>
             <Post/>
+            <h1>Dastan</h1>
         </div>
     );
 }
